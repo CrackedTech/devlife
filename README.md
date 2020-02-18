@@ -1,4 +1,4 @@
-Looking to clean up some errors/bugs, fix spelling errors and maybe even test out some updates/improvements.  All credit for the original game and work goes to [naoxink](https://github.com/naoxink)
+Looking to clean up some errors/bugs, fix spelling errors and maybe even test out some updates/improvements.  All credit for the original game and work goes to [naoxink](https://github.com/naoxink).
 
 Original README below for now.
 
