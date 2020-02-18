@@ -5,7 +5,7 @@ Shop.items = {
 		'showing': false,
 		'oneuse': false,
 		'initial': true,
-		'label': 'Buy coffee',
+		'label': 'Buy Coffee',
 		'help': 'Have a coffee and temporarily increase your money rate<hr>Money +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse',
 		'cost': 5,
 		'buy': function(button, secondsLeft){
@@ -40,7 +40,7 @@ Shop.items = {
 		'showing': false,
 		'oneuse': false,
 		'initial': true,
-		'label': 'Buy energy drink',
+		'label': 'Buy an Energy Drink',
 		'help': 'Have an energy drink to boost your pulse speed<hr>Pulse speed +' + (Core.base.energyDrinkInc) + '%',
 		'cost': 15,
 		'buy': function(button, secondsLeft){
@@ -90,8 +90,8 @@ Shop.items = {
 		'showing': false,
 		'oneuse': true,
 		'initial': true,
-		'label': 'Infinite coffee contract',
-		'help': 'You make a contract with a coffee vendor to have coffee with no cost and permanently<hr>Permanent +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse',
+		'label': 'Coffee Shop Sponsorship',
+		'help': 'You sign a sponsorship deal with a local coffee shop giving you unlimited, lifetime coffee.<hr>Permanent +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse',
 		'cost': 20000,
 		'buy': function(){
 			if(Stats.isCoffeePowered){
@@ -101,15 +101,15 @@ Shop.items = {
 				Core.base.moneyIncPerPulse += Core.base.moneyIncPerPulse * Core.base.coffeeInc
 				Stats.isCoffeePowered = true
 			}
-			// Achievement Caffeine addict
-			if(Stats.coffeesBought < 200){
-				Stats.coffeesBought = 200
+			// Achievement Coffee Shop Junkie
+			if(Stats.coffeesBought < 50){
+				Stats.coffeesBought = 50
 			}
 			Core._('#shop-item-coffee').parentNode.removeChild(Core._('#shop-item-coffee'))
 			Shop.items.coffee.showing = false
 			this.showing = false
 			Core.addToShowcase({
-				'title': 'Infinite Coffee contract (Permanent +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse)',
+				'title': 'Coffee Shop Sponsorship (Permanent +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse)',
 				'image': 'items/coffee-contract.png'
 			})
 		}
@@ -118,8 +118,8 @@ Shop.items = {
 		'showing': false,
 		'oneuse': true,
 		'initial': true,
-		'label': 'Energy Partner',
-		'help': 'You become partner of "Lightning|Devs S.A."<hr>Permanent pulse speed: +' + (Core.base.energyDrinkInc) + '%',
+		'label': 'Energy Drink Sponsorship',
+		'help': 'You sign a sponsorship deal with a national energy drink brand giving you unlimited, lifetime energy drinks."<hr>Permanent pulse speed: +' + (Core.base.energyDrinkInc) + '%',
 		'cost': 20000,
 		'buy': function(){
 			if(Stats.isEnergyDrinkPowered){
@@ -129,15 +129,15 @@ Shop.items = {
 				Core.base.pulseDuration *= Core.base.energyDrinkInc
 				Stats.isEnergyDrinkPowered = true
 			}
-			// Achievement Caffeine addict
-			if(Stats.energyDrinksBought < 200){
-				Stats.energyDrinksBought = 200
+			// Achievement Death by Caffeine
+			if(Stats.energyDrinksBought < 50){
+				Stats.energyDrinksBought = 50
 			}
 			Core._('#shop-item-energyDrink').parentNode.removeChild(Core._('#shop-item-energyDrink'))
 			Shop.items.energyDrink.showing = false
 			this.showing = false
 			Core.addToShowcase({
-				'title': 'Energy Partner (Permanent pulse speed: +' + (Core.base.energyDrinkInc) + '%',
+				'title': 'Energy Drink Sponsorship (Permanent pulse speed: +' + (Core.base.energyDrinkInc) + '%',
 				'image': 'items/energy-partner.png'
 			})
 		}
@@ -146,7 +146,7 @@ Shop.items = {
 		'showing': false,
 		'oneuse': false,
 		'initial': true,
-		'label': 'Company name change',
+		'label': 'Company Name Change',
 		'help': '',
 		'cost': 5000,
 		'buy': function(){
@@ -158,7 +158,7 @@ Shop.items = {
 				return false
 			}
 			Core.showPopUp({
-				'title': 'Company name changed',
+				'title': 'Company Name Changed',
 				'description': 'Your company name is now "' + Stats.companyName + '"'
 			})
 			document.title = Stats.companyName + ' intranet | devLife'
@@ -169,8 +169,8 @@ Shop.items = {
 		'showing': false,
 		'oneuse': false,
 		'initial': true,
-		'label': 'Marketing campaign',
-		'help': 'Launch a marketing campaign to increase opportunities for quick projects',
+		'label': 'Marketing Campaign',
+		'help': 'Launch a marketing campaign to increase opportunities for quick projects.',
 		'cost': 2000,
 		'buy': function(button, secondsLeft){
 			var _item = this
@@ -272,22 +272,6 @@ Shop.items = {
 			// Core._('#css').setAttribute('href', 'css/intranet2.css?' + new Date().getTime())
 		}
 	},
-	'imRichDiamondPlate': {
-		'showing': false,
-		'oneuse': true,
-		'initial': true,
-		'label': '"I\'m a rich b**ch" diamond plate',
-		'help': 'Show them you are SO RICH! at least before buying this useless plate<hr>Totally <b>useless</b>',
-		'cost': 100000000,
-		'buy': function(){
-			this.owned = true
-			this.showing = false
-			Core.addToShowcase({
-				'title': '"I\'m a rich b**ch" diamond plate (Useless)',
-				'image': 'items/diamond-plate.png'
-			})
-		}
-	},
 	'devmainframe': {
 		'showing': false,
 		'oneuse': true,
@@ -308,14 +292,30 @@ Shop.items = {
 			Stats.computerVersion = 1
 		}
 	},
-	'rasberryPi': {
+	'imRichDiamondPlate': {
+		'showing': false,
+		'oneuse': true,
+		'initial': true,
+		'label': '"I\'m Rich Bitch!" diamond plate',
+		'help': 'Show them you are SO RICH! at least before buying this useless plate<hr>Totally <b>useless</b>',
+		'cost': 100000000,
+		'buy': function(){
+			this.owned = true
+			this.showing = false
+			Core.addToShowcase({
+				'title': '"I\'m Rich Bitch" diamond plate (It's only purpose is to show others just how rich you are.)',
+				'image': 'items/diamond-plate.png'
+			})
+		}
+	},
+	'raspberryPi': {
 		'showing': false,
 		'oneuse': true,
 		'initial': false,
 		'label': 'Raspberry Pi',
 		'help': 'Some room for your scripts<hr>Project time reduction: 2%',
 		'cost': 25000,
-		'unlocks': 'rasberryPi2',
+		'unlocks': 'raspberryPi2',
 		'buy': function(button){
 			Core.base.projectTimeReductionPercent += 2
 			this.owned = true
@@ -326,7 +326,7 @@ Shop.items = {
 			})
 		},
 	},
-	'rasberryPi2': {
+	'raspberryPi2': {
 		'showing': false,
 		'oneuse': true,
 		'initial': false,
