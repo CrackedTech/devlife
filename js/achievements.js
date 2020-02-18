@@ -270,7 +270,7 @@ var achievements = [
 			return Stats.hackedAchievement
 		},
 		'done': false,
-		'hdden': true
+		'hidden': true
 	},
 	{
 		'title': 'Coffee Shop Junkie',
