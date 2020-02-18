@@ -19,7 +19,7 @@ Core.base = {
 
 	'numbersTickets': 100000,
 	'timeRaffle': 5000,
-	'lotteryPrize': 1000000,
+	'lotteryPrize': 10000000,
 	'lotteryTicketCost': 1,
 
 	'coffeePrice': 5,
@@ -47,7 +47,7 @@ Core.base = {
 		'lucky': {
 			'name': 'Lucky Pixel',
 			'odds': [ 1, 30 ], // 30%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
 				var inc = Math.floor(Stats.money * 1)
 				Stats.money += inc
@@ -57,7 +57,7 @@ Core.base = {
 		'rushy' : {
 			'name': 'Rushy Pixel',
 			'odds': [ 31, 60 ], // 30%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
 				var multiplier = 2
 				var secs = 15
@@ -67,13 +67,13 @@ Core.base = {
 						Core.base.projectProfitMultiplier = oldMultiplier
 						Core.updateHUD()
 				}, secs * 1000)
-				return callback('Increased your proyect profits by ' + (multiplier * 100) + '% for ' + secs + ' seconds!')
+				return callback('Project profits increased by ' + (multiplier * 100) + '% for ' + secs + ' seconds!')
 			}
 		},
 		'cursed': {
 			'name': 'Cursed Pixel',
 			'odds': [ 61, 75 ], // 15%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
 				var multiplier = -1
 				var secs = 15
@@ -83,21 +83,21 @@ Core.base = {
 						Core.base.projectProfitMultiplier = oldMultiplier
 						Core.updateHUD()
 				}, secs * 1000)
-				return callback('Reduced your proyect profits by ' + (multiplier * 100) + '% for ' + secs + ' seconds!')
+				return callback('Project profits reduced by ' + (multiplier * 100) + '% for ' + secs + ' seconds!')
 			}
 		},
 		'passive': {
 			'name': 'Passive Pixel',
 			'odds': [ 76, 95 ], // 20%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
-				return callback('Absolutelly nothing happened')
+				return callback('Absolutely nothing happened')
 			}
 		},
 		'rage': {
 			'name': 'Rage pixel',
 			'odds': [ 96, 98 ], // 3%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
 				// Cancela todos los proyectos activos
 				for(var pid in Core.projects){
@@ -118,13 +118,13 @@ Core.base = {
 				for(var i = 0, len = qp.length; i < len; i++){
 					qp[i].parentNode.removeChild(qp[i])
 				}
-				return callback('All active projects stopped')
+				return callback('All active Projects stopped')
 			}
 		},
-		'glorius': { // 
-			'name': 'Glorius pixel',
+		'glorious': { // 
+			'name': 'Glorious pixel',
 			'odds': [ 98, 100 ], // 2%
-			'poped': 0,
+			'popped': 0,
 			'effect': function(callback){
 				var inc = Math.floor(Stats.money * 10)
 				Stats.money += inc
