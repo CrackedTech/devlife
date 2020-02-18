@@ -1,6 +1,6 @@
-Looking to clean up some errors/bugs, fix spelling errors and maybe even test out some updates/improvements.
+Looking to clean up some errors/bugs, fix spelling errors and maybe even test out some updates/improvements.  All credit for the original game and work goes to [naoxink](https://github.com/naoxink)
 
-Originall README below for now.
+Original README below for now.
 
 # devlife ![version 1.8.8](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.8.8&x2=0) ![license MIT](https://badges.frapsoft.com/os/mit/mit.svg?v=102)
 
