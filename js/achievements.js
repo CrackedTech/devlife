@@ -1,6 +1,6 @@
 var achievements = [
 	{
-		'title': 'Starter',
+		'title': 'Project Management Assistant',
 		'help': 'Complete your first Project',
 		'check': function(){
 			return Stats.projects >= 1
@@ -8,25 +8,31 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Hitting Singles',
-		'help': 'Complete 10 Projects',
+		'title': 'Project Manager',
+		'help': 'Complete 25 Projects',
 		'check': function(){
-			return Stats.projects >= 10
+			return Stats.projects >= 25
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'Project Planner',
-		'help': 'Complete 100 Projects',
+		'title': 'Senior Project Manager',
+		'help': 'Complete 10 Projects',
 		'check': function(){
 			return Stats.projects >= 100
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'With 4 Hands',
+		'title': 'Project Management Director',
+		'help': 'Complete 250 Projects',
+		'check': function(){
+			return Stats.projects >= 250
+		},
+		'done': false,
+	},
+	{
+		'title': 'Multitasker',
 		'help': 'Unlock a parallel Project',
 		'check': function(){
 			return Stats.improvements.indexOf('addProject') !== -1
@@ -34,13 +40,12 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Lazyness',
+		'title': 'And Get Us Some Coffee!',
 		'help': 'Get the improvement "Click no more"',
 		'check': function(){
 			return Core.hasImprovement('autoStartProjects')
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
 		'title': 'First Time Gambler',
@@ -51,7 +56,7 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'The Gambler',
+		'title': 'Gambling Man(or Woman)',
 		'help': 'Spend ' +  Core.numberFormat(100) + ' on the Lottery',
 		'check': function(){
 			return Stats.ticketsBought * Core.base.lotteryTicketCost >= 100
@@ -59,10 +64,10 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Lottery Addict',
-		'help': 'Spend ' + Core.numberFormat(200) + ' on the Lottery',
+		'title': 'The Gambler',
+		'help': 'Spend ' + Core.numberFormat(250) + ' on the Lottery',
 		'check': function(){
-			return Stats.ticketsBought >= 200
+			return Stats.ticketsBought >= 250
 		},
 		'progress': function(){
 			return '' + Stats.ticketsBought + '/' + 200
@@ -78,7 +83,7 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Daddy Needs a New Pair of Shoes',
+		'title': 'They Take How Much in Taxes?!',
 		'help': 'Win the lottery',
 		'check': function(){
 			return Stats.lotteryWon
@@ -87,11 +92,12 @@ var achievements = [
 	},
 	{
 		'title': 'Fully Upgraded',
-		'help': 'Upgrade your computer to version 20',
+		'help': 'Upgrade your starting computer to version 20',
 		'check': function(){
 			return Stats.computerVersion >= 20
 		},
 		'done': false
+		'hidden': true
 	},
 	{
 		'title': 'The New Hotness',
@@ -110,42 +116,40 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Holy Shazbot!',
-		'help': 'Get the ultimate dev-mainframe',
+		'title': 'I Have the POWER!',
+		'help': 'Buy the "dev-mainframe"',
 		'check': function(){
 			return Shop.items['devmainframe'].owned
 		},
 		'done': false
 	},
 	{
-		'title': 'Millionaire',
-		'help': 'Have at least ' + Core.numberFormat(1000000),
+		'title': 'I\'m not rich, I\'m comfortable.',
+		'help': 'Have at least ' + Core.numberFormat(1000000) + ' at one time',
 		'check': function(){
 			return Stats.money >= 1000000
 		},
 		'done': false
 	},
 	{
-		'title': 'Need some change?',
-		'help': 'Earn your money up to ' + Core.numberFormat(10000000),
+		'title': 'Mo Money Mo Problems',
+		'help': 'Have at least ' + Core.numberFormat(10000000) + ' at one time', 
 		'check': function(){
 			return Stats.money >= 10000000
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'The world is yours',
-		'help': 'Raise your money up to ' + Core.numberFormat(100000000),
+		'title': 'My Servants Have Servants',
+		'help': 'Have at least ' + Core.numberFormat(100000000) + ' at one time',
 		'check': function(){
 			return Stats.money >= 100000000
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'I like this job',
-		'help': 'Get the same job twice at the same time',
+		'title': 'So Nice, I Had to Do It Twice',
+		'help': 'Have the same job twice at the same time',
 		'check': function(){
 			var exists = false
 			for(var i = 0, len = Stats.jobs.length; i < len; i++){
@@ -163,7 +167,7 @@ var achievements = [
 		'hidden': true
 	},
 	{
-		'title': 'Multitasker',
+		'title': 'Wage Slave',
 		'help': 'Have the max number of simultaneous Jobs',
 		'check': function(){
 			return Stats.jobs.length === Core.base.maxJobs
@@ -173,7 +177,7 @@ var achievements = [
 	},
 	{
 		'title': 'Take This Job and Shove It!',
-		'help': 'Drop all your jobs',
+		'help': 'Quit all of your Jobs',
 		'check': function(){
 			return Stats.jobs.length <= 0
 		},
@@ -205,8 +209,8 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Holy glory',
-		'help': 'Click 1 glorius pixel',
+		'title': 'Holy Glory',
+		'help': 'Click 1 Glorious Pixel',
 		'check': function(){
 			return Core.base.wildPixelTypes.glorius.poped >= 1
 		},
@@ -214,7 +218,7 @@ var achievements = [
 		'hidden': true
 	},
 	{
-		'title': 'Command Prompt Addict',
+		'title': 'Hacker Typer',
 		'help': 'Type 200 keys in the Terminal',
 		'check': function(){
 			return Stats.commandPromptKeysPressed >= 200
@@ -236,42 +240,40 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Keys on fire',
-		'help': 'Make ' + Core.numberFormat(10000) + ' with the command prompt',
+		'title': 'Keys on Fire',
+		'help': 'Make ' + Core.numberFormat(10000) + ' from typing in the Terminal',
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 10000
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'Key blender',
-		'help': 'Make ' + Core.numberFormat(100000) + ' with the command prompt',
+		'title': 'Key Blender',
+		'help': 'Make ' + Core.numberFormat(100000) + ' from typing in the Terminal',
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 100000
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
-		'title': 'Command guru',
-		'help': 'Make ' + Core.numberFormat(1000000) + ' with the command prompt',
+		'title': 'Command Guru',
+		'help': 'Make ' + Core.numberFormat(1000000) + ' from typing in the Terminal',
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 1000000
 		},
 		'done': false,
-		'hidden': true
 	},
 	{
 		'title': 'I r t3h l33t h4x0rz',
-		'help': 'You have to hack this achievement',
+		'help': 'Hack in your own Achievement',
 		'check': function(){ 
 			return Stats.hackedAchievement
 		},
 		'done': false
+		'hdden': true
 	},
 	{
-		'title': 'Caffeine Addict',
+		'title': 'Coffee Shop Junkie',
 		'help': 'Buy 50 coffees',
 		'check': function(){
 			return Stats.coffeesBought >= 50
@@ -282,7 +284,7 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Taurine Addict',
+		'title': 'Death By Caffine',
 		'help': 'Buy 50 energy drinks',
 		'check': function(){
 			return Stats.energyDrinksBought >= 50
