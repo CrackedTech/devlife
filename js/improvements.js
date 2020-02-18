@@ -1,7 +1,7 @@
 var improvements = {
 	'addProject': {
-		'label': 'Improve project tech',
-		'help': 'You will be able to start another project at the same time',
+		'label': 'Increase Project capacity',
+		'help': 'Increase your simultaneous Project capcity by 1.',
 		'cost': 8000,
 		'investigationTime': 600000, // 10m
 		'load': function () {
@@ -18,8 +18,8 @@ var improvements = {
 		'showing': false
 	},
 	'computacionalTech': {
-		'label': 'Research a new computacional technology',
-		'help': 'Increase the computer upgrade version up to 20',
+		'label': 'Increase Computer resources',
+		'help': 'Increase the version of your current Computer by 1 (Up to a max of 20).',
 		'cost': 5000,
 		'investigationTime': 600000, // 10m
 		'load': function () {
