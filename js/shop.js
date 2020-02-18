@@ -297,13 +297,13 @@ Shop.items = {
 		'oneuse': true,
 		'initial': true,
 		'label': '"I\'m Rich Bitch!" diamond plate',
-		'help': 'Show them you are SO RICH! at least before buying this useless plate<hr>Totally <b>useless</b>',
+		'help': 'It\'s only purpose is to show others just how rich you are.',
 		'cost': 100000000,
 		'buy': function(){
 			this.owned = true
 			this.showing = false
 			Core.addToShowcase({
-				'title': '"I\'m Rich Bitch" diamond plate (It's only purpose is to show others just how rich you are.)',
+				'title': '"I\'m Rich Bitch" diamond plate',
 				'image': 'items/diamond-plate.png'
 			})
 		}
