@@ -13,7 +13,7 @@ var achievements = [
 		'check': function(){
 			return Stats.projects >= 25
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'Senior Project Manager',
@@ -21,7 +21,7 @@ var achievements = [
 		'check': function(){
 			return Stats.projects >= 100
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'Project Management Director',
@@ -29,7 +29,7 @@ var achievements = [
 		'check': function(){
 			return Stats.projects >= 250
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'Multitasker',
@@ -45,7 +45,7 @@ var achievements = [
 		'check': function(){
 			return Core.hasImprovement('autoStartProjects')
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'First Time Gambler',
@@ -96,7 +96,7 @@ var achievements = [
 		'check': function(){
 			return Stats.computerVersion >= 20
 		},
-		'done': false
+		'done': false,
 		'hidden': true
 	},
 	{
@@ -137,7 +137,7 @@ var achievements = [
 		'check': function(){
 			return Stats.money >= 10000000
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'My Servants Have Servants',
@@ -145,7 +145,7 @@ var achievements = [
 		'check': function(){
 			return Stats.money >= 100000000
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'So Nice, I Had to Do It Twice',
@@ -245,7 +245,7 @@ var achievements = [
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 10000
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'Key Blender',
@@ -253,7 +253,7 @@ var achievements = [
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 100000
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'Command Guru',
@@ -261,7 +261,7 @@ var achievements = [
 		'check': function(){
 			return Stats.commandPrompMoneyEarned >= 1000000
 		},
-		'done': false,
+		'done': false
 	},
 	{
 		'title': 'I r t3h l33t h4x0rz',
@@ -269,7 +269,7 @@ var achievements = [
 		'check': function(){ 
 			return Stats.hackedAchievement
 		},
-		'done': false
+		'done': false,
 		'hdden': true
 	},
 	{
