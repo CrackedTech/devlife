@@ -16,8 +16,6 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Fully Upgraded',var achievements = [
-	{
 		'title': 'Starter',
 		'help': 'Complete your first Project',
 		'check': function(){
