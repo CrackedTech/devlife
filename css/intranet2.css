@@ -218,7 +218,7 @@ ul > li > button {
 	padding: 15px 0 5px 0;
 }
 #lottery #winner:before {
-	content: 'Winner number: ';
+	content: 'Winning number: ';
 }
 #lottery #owned:before {
 	content: 'Your number: ';
