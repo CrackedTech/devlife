@@ -56,7 +56,7 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Gambling Man',
+		'title': 'Gambling Man(or Woman)',
 		'help': 'Spend ' +  Core.numberFormat(100) + ' on the Lottery',
 		'check': function(){
 		// 	return Stats.ticketsBought * Core.base.lotteryTicketCost >= 100
