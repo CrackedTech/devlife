@@ -149,14 +149,14 @@ Core.updateHUD = function(){
 	Core._('#achievement-resume').innerHTML = Stats.achievementsUnlocked + '/' + Stats.achievementsCount + ' (' + ((Stats.achievementsUnlocked * 100) / Stats.achievementsCount).toFixed(1) + '%)'
 	// Desglose de logros
 	Core.setHelp(Core._('#achievement-resume').parentNode, 'Achievements unlocked', { 'Hidden': Stats.achievementsHiddenUnlocked })
-	Core._('#wild-pixels-poped').innerHTML = Stats.wildPixelsClicked
+	Core._('#wild-pixels-popped').innerHTML = Stats.wildPixelsClicked
 	var wppDetail = {  }
 	for(var p in Core.base.wildPixelTypes){
-		if(typeof Core.base.wildPixelTypes[p].poped === 'number'){
-			wppDetail[Core.base.wildPixelTypes[p].name] = Core.base.wildPixelTypes[p].poped
+		if(typeof Core.base.wildPixelTypes[p].popped === 'number'){
+			wppDetail[Core.base.wildPixelTypes[p].name] = Core.base.wildPixelTypes[p].popped
 		}
 	}
-	Core.setHelp(Core._('#wild-pixels-poped').parentNode, 'Wild pixels poped', wppDetail)
+	Core.setHelp(Core._('#wild-pixels-popped').parentNode, 'Wild pixels popped', wppDetail)
 }
 
 Core.jobFinder = function(button){
@@ -1067,7 +1067,7 @@ Core.popWildPixel = function(){
 	// Elegir según las probabilidades de cada uno
 	for(var p in Core.base.wildPixelTypes){
 		if(rand >= Core.base.wildPixelTypes[p].odds[0] && rand <= Core.base.wildPixelTypes[p].odds[1]){
-			Core.base.wildPixelTypes[p].poped++
+			Core.base.wildPixelTypes[p].popped++
 			pixel = Core.base.wildPixelTypes[p]
 		}
 	}
