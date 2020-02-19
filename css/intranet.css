@@ -160,7 +160,7 @@ ul > li > button {
 	text-align: center;
 }
 #lottery #winner:before {
-	content: 'Winner number: ';
+	content: 'Winning number: ';
 }
 #lottery #owned:before {
 	content: 'Your number: ';
