@@ -94,14 +94,14 @@ Core.updateHUD = function(){
 	Core._('#money').innerHTML = Core.numberFormat(Stats.money)
 	// Desglose dinero actual
 	var moneyDetail = { 'Jobs': Core.numberFormat(Core.calcSalaries(), '/m') }
-	Core.setHelp(Core._('#money').parentNode, 'Current money', moneyDetail)
+	Core.setHelp(Core._('#money').parentNode, 'The amount of Money you currently have.', moneyDetail)
 	// Dinero por pulso
 	var pulseDetail = {  }
 	if(Stats.isCoffeePowered){
 		pulseDetail['Coffee'] = '+' + Core.numberFormat(Stats.coffeeIncrement)
 	}
 	Core._('#incPerPulse').innerHTML = Core.numberFormat(Core.base.moneyIncPerPulse, '/pulse')
-	Core.setHelp(Core._('#incPerPulse').parentNode, 'Money per pulse while active project', pulseDetail)
+	Core.setHelp(Core._('#incPerPulse').parentNode, 'The amount of Money you earn per Pulse while a Project is in progress.', pulseDetail)
 
 	if(Core.base.projectProfitMultiplier){
 		Core._('#incPerPulse').innerHTML += ' <small>(Multiplier ' + (Core.base.projectProfitMultiplier > 0 ? '+' : '') +  (Core.base.projectProfitMultiplier * 100) + '%)</small>'
@@ -115,7 +115,7 @@ Core.updateHUD = function(){
 	if(Stats.isEnergyDrinkPowered){
 		pulseSpeedDetail['Energy drink'] = '-' + Math.abs(Core.base.pulseDuration - (Core.base.pulseDuration / Core.base.energyDrinkInc)) + 'ms'
 	}
-	Core.setHelp(Core._('#pulseSpeed').parentNode, 'Speed of making money during projects', pulseSpeedDetail)
+	Core.setHelp(Core._('#pulseSpeed').parentNode, 'The current Pulse speed while a Project is in progress.', pulseSpeedDetail)
 	Core._('#projects').innerHTML = Stats.projects
 	// Lotería
 	Core._('#moneySpent').innerHTML = (Stats.ticketsBought * Core.base.lotteryTicketCost) + ' ' + Core.base.moneyChar
@@ -148,7 +148,7 @@ Core.updateHUD = function(){
 	// Logros
 	Core._('#achievement-resume').innerHTML = Stats.achievementsUnlocked + '/' + Stats.achievementsCount + ' (' + ((Stats.achievementsUnlocked * 100) / Stats.achievementsCount).toFixed(1) + '%)'
 	// Desglose de logros
-	Core.setHelp(Core._('#achievement-resume').parentNode, 'Achievements unlocked', { 'Hidden': Stats.achievementsHiddenUnlocked })
+	Core.setHelp(Core._('#achievement-resume').parentNode, 'Number of Achievements you\'ve unlocked.', { 'Hidden': Stats.achievementsHiddenUnlocked })
 	Core._('#wild-pixels-popped').innerHTML = Stats.wildPixelsClicked
 	var wppDetail = {  }
 	for(var p in Core.base.wildPixelTypes){
@@ -156,7 +156,7 @@ Core.updateHUD = function(){
 			wppDetail[Core.base.wildPixelTypes[p].name] = Core.base.wildPixelTypes[p].popped
 		}
 	}
-	Core.setHelp(Core._('#wild-pixels-popped').parentNode, 'Wild pixels popped', wppDetail)
+	Core.setHelp(Core._('#wild-pixels-popped').parentNode, 'Number of Wild Pixels you\'ve popped.', wppDetail)
 }
 
 Core.jobFinder = function(button){
