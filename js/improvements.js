@@ -19,7 +19,7 @@ var improvements = {
 	},
 	'computacionalTech': {
 		'label': 'Increase Computer resources',
-		'help': 'Increase the version of your current Computer by 1 (Up to a max of 20).',
+		'help': 'Increase the version of your current Computer by 1 up to a max of 20.',
 		'cost': 5000,
 		'investigationTime': 600000, // 10m
 		'load': function () {
