@@ -1,5 +1,5 @@
 Core.base = {
-	'moneyChar': '¢',
+	'moneyChar': '$',
 	'pulseDuration': 1000,
 	'moneyIncPerPulse': 3,
 	'maxPulseDuration': 10000,
