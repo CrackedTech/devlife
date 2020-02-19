@@ -216,7 +216,7 @@ var achievements = [
 		'title': 'Holy Glory',
 		'help': 'Click 1 Glorious Pixel',
 		'check': function(){
-			return Core.base.wildPixelTypes.glorius.popped >= 1
+			return Core.base.wildPixelTypes.glorious.popped >= 1
 		},
 		'done': false,
 		'hidden': true
