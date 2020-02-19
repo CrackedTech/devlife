@@ -5,7 +5,7 @@ Shop.items = {
 		'showing': false,
 		'oneuse': false,
 		'initial': true,
-		'label': 'Buy Coffee',
+		'label': 'Buy a Coffee',
 		'help': 'Have a coffee and temporarily increase your money rate<hr>Money +' + (Core.base.coffeeInc * 100) + '% ' + Core.base.moneyChar + '/pulse',
 		'cost': 5,
 		'buy': function(button, secondsLeft){
@@ -23,7 +23,7 @@ Shop.items = {
 					Core.base.moneyIncPerPulse -= Stats.coffeeIncrement
 					Stats.coffeeIncrement = 0
 					Stats.isCoffeePowered = false
-					button.innerText = button.textContent = 'Buy Coffee (' + Core.numberFormat(Core.base.coffeePrice) + ')'
+					button.innerText = button.textContent = 'Buy a Coffee (' + Core.numberFormat(Core.base.coffeePrice) + ')'
 					button.removeAttribute('disabled')
 					button.removeAttribute('data-running')
 					clearInterval(window.coffeeInterval)
@@ -56,7 +56,7 @@ Shop.items = {
 				if(Stats.energyDrinkTimeLeft <= 0){
 					Core.base.pulseDuration /= Core.base.energyDrinkInc
 					Stats.isEnergyDrinkPowered = false
-					button.innerText = button.textContent = 'Buy Energy Drink (' + Core.numberFormat(Core.base.energyDrinkPrice) + ')'
+					button.innerText = button.textContent = 'Buy an Energy Drink (' + Core.numberFormat(Core.base.energyDrinkPrice) + ')'
 					button.removeAttribute('disabled')
 					button.removeAttribute('data-running')
 					clearInterval(window.energyDrinkInterval)
@@ -303,7 +303,7 @@ Shop.items = {
 			this.owned = true
 			this.showing = false
 			Core.addToShowcase({
-				'title': '"I\'m Rich Bitch" diamond plate',
+				'title': '"I\'m Rich Bitch!" diamond plate',
 				'image': 'items/diamond-plate.png'
 			})
 		}
