@@ -17,7 +17,7 @@ var achievements = [
 	},
 	{
 		'title': 'Senior Project Manager',
-		'help': 'Complete 10 Projects',
+		'help': 'Complete 100 Projects',
 		'check': function(){
 			return Stats.projects >= 100
 		},
@@ -56,10 +56,14 @@ var achievements = [
 		'done': false
 	},
 	{
-		'title': 'Gambling Man(or Woman)',
+		'title': 'Gambling Man',
 		'help': 'Spend ' +  Core.numberFormat(100) + ' on the Lottery',
 		'check': function(){
-			return Stats.ticketsBought * Core.base.lotteryTicketCost >= 100
+		// 	return Stats.ticketsBought * Core.base.lotteryTicketCost >= 100
+					return Stats.ticketsBought >= 100
+		},
+		'progress': function(){
+			return '' + Stats.ticketsBought + '/' + 100
 		},
 		'done': false
 	},
@@ -70,7 +74,7 @@ var achievements = [
 			return Stats.ticketsBought >= 250
 		},
 		'progress': function(){
-			return '' + Stats.ticketsBought + '/' + 200
+			return '' + Stats.ticketsBought + '/' + 250
 		},
 		'done': false
 	},
@@ -204,7 +208,7 @@ var achievements = [
 		'title': 'What Would You Say You Do Here?',
 		'help': 'Get a Wild Pixel that does nothing',
 		'check': function(){
-			return Core.base.wildPixelTypes.passive.poped >= 1
+			return Core.base.wildPixelTypes.passive.popped >= 1
 		},
 		'done': false
 	},
@@ -212,7 +216,7 @@ var achievements = [
 		'title': 'Holy Glory',
 		'help': 'Click 1 Glorious Pixel',
 		'check': function(){
-			return Core.base.wildPixelTypes.glorius.poped >= 1
+			return Core.base.wildPixelTypes.glorius.popped >= 1
 		},
 		'done': false,
 		'hidden': true
