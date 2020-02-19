@@ -231,16 +231,10 @@ ul > li > button {
 	margin: 5px 0;
 	text-transform: uppercase;
 }
-/*#lottery #winner:before {
+#lottery #winner:before {
 	content: 'Winning number: ';
 }
 #lottery #owned:before {
-	content: 'Your number: ';
-}*/
-#lottery #winner {
-	content: 'Winning number: ';
-}
-#lottery #owned {
 	content: 'Your number: ';
 }
 .job-list > li > button,
