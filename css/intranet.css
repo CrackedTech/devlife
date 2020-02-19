@@ -159,16 +159,10 @@ ul > li > button {
 	width: 50%;
 	text-align: center;
 }
-/*#lottery #winner:before {
+#lottery #winner:before {
 	content: 'Winning number: ';
 }
 #lottery #owned:before {
-	content: 'Your number: ';
-}*/
-#lottery #winner {
-	content: 'Winning number: ';
-}
-#lottery #owned {
 	content: 'Your number: ';
 }
 #lottery #info {
